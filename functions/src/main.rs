@@ -3,13 +3,13 @@ fn main() {
         say_hi()
     } */
     let mut name = "John";
-    say_hello(&mut name);
-    println!("{}", name);
+    let greeting = say_hello(&mut name);
+    println!("{}", greeting);
 }
 
-fn say_hello(name: &mut &str) {
-    println!("Hello {}", name);
-    *name = "Alex";
+fn say_hello(name: &mut &str) -> String {
+    let greeting = format!("Hello {}", name);
+    return greeting;
 }
 
 // fn say_hi() {
